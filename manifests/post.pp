@@ -7,7 +7,7 @@ class iptables::post {
     before => undef,
   }
 
-  firewall { '999 drop all':
+  firewall { '999 drop all v6':
     proto    => 'all',
     action   => 'drop',
     before   => undef,
