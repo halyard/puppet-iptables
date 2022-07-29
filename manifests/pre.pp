@@ -23,28 +23,28 @@ class iptables::pre {
   }
 
   firewall { '004 accept inbound ssh':
-    dport    => 22,
-    proto    => 'tcp',
-    action   => 'accept',
+    dport  => 22,
+    proto  => 'tcp',
+    action => 'accept',
   }
 
   firewall { '001 accept related established rules':
-    proto  => 'all',
-    state  => ['RELATED', 'ESTABLISHED'],
-    action => 'accept',
+    proto    => 'all',
+    state    => ['RELATED', 'ESTABLISHED'],
+    action   => 'accept',
     provider => 'ip6tables',
   }
 
   firewall { '002 accept all icmp':
-    proto  => 'ipv6-icmp',
-    action => 'accept',
+    proto    => 'ipv6-icmp',
+    action   => 'accept',
     provider => 'ip6tables',
   }
 
   firewall { '003 accept all to lo interface':
-    proto   => 'all',
-    iniface => 'lo',
-    action  => 'accept',
+    proto    => 'all',
+    iniface  => 'lo',
+    action   => 'accept',
     provider => 'ip6tables',
   }
 
