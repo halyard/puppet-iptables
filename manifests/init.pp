@@ -3,12 +3,10 @@
 class iptables (
 ) {
   class { 'iptables::pre': }
+  class { 'firewall': }
+  class { 'iptables::post': }
 
-  -> class { 'firewall': }
-
-  -> class { 'iptables::post': }
-
-  -> resources { 'firewall':
+  resources { 'firewall':
     purge => true,
   }
 }
