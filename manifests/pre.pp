@@ -11,6 +11,13 @@ class iptables::pre {
     action => 'accept',
   }
 
+  firewall { '001 accept related established rules in forward':
+    proto  => 'all',
+    state  => ['RELATED', 'ESTABLISHED'],
+    action => 'accept',
+    chain  => 'forward',
+  }
+
   firewall { '002 accept all icmp':
     proto  => 'icmp',
     action => 'accept',
