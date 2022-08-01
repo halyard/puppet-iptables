@@ -15,7 +15,7 @@ class iptables::pre {
     proto  => 'all',
     state  => ['RELATED', 'ESTABLISHED'],
     action => 'accept',
-    chain  => 'forward',
+    chain  => 'FORWARD',
   }
 
   firewall { '002 accept all icmp':
