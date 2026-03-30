@@ -1,16 +1,12 @@
 {
   "name": "halyard-iptables",
-  "version": "0.0.26",
+  "version": "0.0.27",
   "author": "Les Aker",
   "license": "MIT",
   "summary": "Configure iptables networks",
   "source": "https://github.com/halyard/puppet-iptables",
   "project_page": "https://github.com/halyard/puppet-iptables",
   "issues_url": "https://github.com/halyard/puppet-iptables/issues",
-  "dependencies": [
-
-  ],
-  "operatingsystem_support": [
-
-  ]
+  "dependencies": [],
+  "operatingsystem_support": []
 }
